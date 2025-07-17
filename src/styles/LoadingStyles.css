@@ -1,0 +1,180 @@
+.container{
+    flex:content;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  margin: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.loading-bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.loading-bar1 {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  animation: loading1 2s infinite;
+}
+
+/* info */
+.loading-bar2 {
+  height: 100%;
+  width: 0%;
+  background-color: #0099ff;
+  animation: loading2 2s infinite;
+}
+
+@keyframes loading1 {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+
+  
+}
+
+@keyframes loading2 {
+  0% {
+    width: 0%;
+    background-color: rgb(16, 138, 16);
+  }
+  25% {
+    width: 25%;
+    background-color: rgb(60, 255, 0);
+  }
+  50% {
+      width: 50%;
+      background-color: yellow;
+    }
+    75% {
+      width: 75%;
+      background-color: orange;
+    }
+  100% {
+    width: 100%;
+    background-color: red;
+  }
+
+  
+}
+
+/* spinner loading bar */
+
+/* .card {
+  width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #222;
+  color: #fff;
+  margin: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  text-align: center;
+} */
+
+.spinner-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #ccc;
+  border-top: 4px solid #086b7c;
+  border-radius: 50%;
+  animation: spin3 1s linear infinite;
+}
+
+@keyframes spin3 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* loading updown container */
+.loading-updown-container{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.l1{
+  animation: dot1 1s linear infinite;
+  font-size: 50px;
+  position:absolute;
+  top: -20px;
+  left: 45%;
+}
+.l3{
+  animation: dot1 1s linear infinite;
+  font-size: 50px;
+  position:absolute;
+  top: -20px;
+  left:51%;
+
+}
+
+.l2{
+  animation: dot2 1s linear infinite;
+  font-size: 50px;
+  position: absolute;
+  top:-20px;
+  left: 48%;
+}
+
+.l4{
+  animation: dot2 1s linear infinite;
+  font-size: 50px;
+  position: absolute;
+  top:-20px;
+  left: 54%;
+}
+
+@keyframes dot1 {
+  0%{
+    margin-top: 15px;
+  }
+  50%{
+    margin-top: 0px;
+  }
+  100%{
+    margin-top: 15px;
+  }
+}
+
+
+@keyframes dot2 {
+  0%{
+    margin-top: 0px;
+  }
+  50%{
+    margin-top: 15px;
+  }
+  100%{
+    margin-top: 0px;
+  }
+}
